@@ -50,3 +50,7 @@ console.log("Unique hobbies:", uniqueHobbies(hobbyLog));
 console.log("Sessions longer than 30 min:", longSessions(hobbyLog, 30));
 // In this console log below, countMood is called wherein moodType is filtered to check for "relaxed".
 console.log("Number of relaxed sessions:", countMood(hobbyLog, "relaxed"));
+
+/* ##Suggestion for improvement: add at least one measure of central tendency, including average session length,
+ordered by hobby.
+*/
