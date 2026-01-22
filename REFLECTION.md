@@ -1,4 +1,4 @@
-Reflection on *hobbyTracker.js*
+# Reflection on *hobbyTracker.js*
 
 - What did you learn from reading and commenting on this code?
     - I learned to recognize use cases and formatting requirements of various functions that handle data in array methods.
