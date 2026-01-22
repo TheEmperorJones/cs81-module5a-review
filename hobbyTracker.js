@@ -7,9 +7,11 @@ const hobbyLog = [
   { day: "Friday", hobby: "reading", minutes: 35, mood: "calm" }
 ];
 
-// This function, totalTime, uses the reduce via an arrow function to sum the total minutes
+// This function, totalTime, uses the array reduce method via an arrow function to sum the total minutes
 // using a variable called session.
 function totalTime(log) {
+  // Starting with an initial value of 0, this will accumulate, taking the current value of the array
+  // through and total the minutes of each entry until the array's last item is included in the sum.
   return log.reduce((sum, session) => sum + session.minutes, 0);
 }
 
