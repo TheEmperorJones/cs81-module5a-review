@@ -11,28 +11,31 @@ const hobbyLog = [
 // using a variable called session.
 function totalTime(log) {
   // Starting with an initial value of 0, this will accumulate, taking the current value of the array
-  // through and total the minutes of each entry until the array's last item is included in the sum.
+  // through and total the minutes of each entry until the array's last item is included in the sum (155).
   return log.reduce((sum, session) => sum + session.minutes, 0);
 }
 
 // This function, uniqueHobbies, uses the map method to catalog each unique hobby.
 function uniqueHobbies(log) {
   const names = log.map(entry => entry.hobby);
-  // The hobbies are then logged in a set of values logged to a new array.
+  // The hobbies are then logged in a set of values logged to a new array, namely:
+  // drawing, reading, gaming.
   return [...new Set(names)];
 }
 
 // This function, longSessions, extracts via the filter method entries that exceed the minMinutes
 // value (yet to be established at this point in the code).
 function longSessions(log, minMinutes) {
-  // Because there are multiple entries that meet this criterium, this returns an array.
+  // Because there are multiple entries that meet this criterium, this returns an array, which
+  // happens to return two entries, that of Wednesday and Friday.
   return log.filter(entry => entry.minutes > minMinutes);
 }
 
 // This function, countMood, uses the filter method to query a specifically (yet to be) named
 // mood value.
 function countMood(log, moodType) {
-  // Because there is just one entry matching this criterium, this returns just a single value.
+  // Because there is just one entry matching this criterium, this returns just a single value
+  // that of the lone relaxed session.
   return log.filter(entry => entry.mood === moodType).length;
 }
 
